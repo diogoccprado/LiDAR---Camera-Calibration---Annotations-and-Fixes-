@@ -1,8 +1,12 @@
 # LiDAR-Camera Calibration Workflow for ROS 2
 
-End-to-end workflow for extrinsic calibration of a **Livox Mid-360 LiDAR** to an **Intel RealSense D435** RGB camera, using rosbag2, SAM masks, and CalibAnything.
+Perception infrastructure workflow for extrinsic calibration of a **Livox Mid-360 LiDAR** to an **Intel RealSense D435** RGB camera, using rosbag2, SAM masks, and CalibAnything.
 
-This repository is a **documentation-only workflow note**—it captures the steps, issues, and fixes from a real calibration run. It does not ship scripts, bags, or calibration outputs.
+This repository is a **documentation-only workflow** for robot perception pipelines. It captures steps, issues, and fixes from a real calibration run on physical sensors. It does not ship scripts, bags, or calibration outputs.
+
+## Why this matters
+
+Multi-sensor robots need a reliable **LiDAR-to-camera extrinsic transform** before semantic mapping, object detection, or fused perception can work. This workflow documents how to go from raw rosbag2 data to a static TF usable in a semantic mapping stack—with the debugging notes needed to reproduce it.
 
 ## Goal
 

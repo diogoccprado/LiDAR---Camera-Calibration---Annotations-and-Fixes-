@@ -2,9 +2,9 @@
 
 **Title:** LiDAR-Camera Calibration Workflow for ROS 2
 
-**Hook:** Documented end-to-end extrinsic calibration pipeline for Livox Mid-360 + RealSense D435 using rosbag2, SAM, and CalibAnything.
+**Hook:** ROS 2 perception infrastructure — documented LiDAR-camera extrinsic calibration for Livox Mid-360 + RealSense D435 using rosbag2, SAM, and CalibAnything.
 
-**Problem:** Multi-sensor robot perception requires an accurate LiDAR-to-camera extrinsic transform, but the calibration toolchain spans rosbag export, mask generation, C++ build issues, and optimizer edge cases.
+**Problem:** Robot perception pipelines require an accurate LiDAR-to-camera extrinsic before semantic mapping or fused sensing can run — but the toolchain spans rosbag export, mask annotation, C++ build issues, and optimizer edge cases.
 
 **What I built:**
 - End-to-end LiDAR-camera extrinsic calibration workflow (rosbag2 → ros2_unbag → SAM → CalibAnything)
