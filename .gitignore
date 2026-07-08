@@ -1,0 +1,23 @@
+# Calibration and generated data
+bags/
+data/
+frames/
+images/
+masks/
+outputs/
+pc/
+processed_masks/
+
+# ROS bags and recordings
+*.bag
+*.db3
+*.mcap
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated logs
+*.log
