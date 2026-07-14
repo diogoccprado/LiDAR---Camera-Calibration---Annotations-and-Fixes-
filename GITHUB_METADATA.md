@@ -1,68 +1,44 @@
-# GitHub Metadata — Recommended Settings
+# GitHub Metadata
 
-Apply these manually in the GitHub web UI or via `gh` CLI. **Do not run automatically.**
+Suggested settings for `lidar-camera-calibration-ros2`. Apply them manually;
+this file does not perform repository changes.
 
-## Recommended repository name
+## About description
 
-```
-lidar-camera-calibration-ros2
-```
-
-## Recommended About description
-
-```
-ROS 2 workflow for LiDAR-camera extrinsic calibration using Livox Mid-360, RealSense D435, rosbag2, SAM masks, and CalibAnything.
+```text
+ROS 2 LiDAR-camera calibration guide using synchronized bags, SAM2 masks, CalibAnything, and FAST-LIO2 frame conversion.
 ```
 
-## Recommended topics
+## Topics
 
-```
+```text
 ros2
 lidar
 camera-calibration
 extrinsic-calibration
-livox
+velodyne
 realsense
 calibanything
 segment-anything
+fast-lio2
+sensor-fusion
 computer-vision
 robotics
 ```
 
-## Suggested pinned repo sentence
+## Suggested pinned-repository sentence
 
-> ROS 2 LiDAR-camera extrinsic calibration workflow: Livox Mid-360 + RealSense D435 via rosbag2, SAM masks, and CalibAnything—with documented fixes.
+> A practical LiDAR–camera extrinsic-calibration workflow with reusable ROS 2
+> export tools, SAM2 masks, CalibAnything build fixes, visual results, and
+> camera-optical-to-IMU transform conversion.
 
-## Manual rename instructions
-
-### Option A: GitHub web UI
-
-1. Go to **Settings → General → Repository name**
-2. Change to `lidar-camera-calibration-ros2`
-3. Click **Rename**
-
-### Option B: GitHub CLI
-
-```bash
-gh repo rename lidar-camera-calibration-ros2 --repo diogoccprado/LiDAR---Camera-Calibration---Annotations-and-Fixes-
-```
-
-### Update local remote after rename
-
-```bash
-cd ~/LiDAR---Camera-Calibration---Annotations-and-Fixes-
-git remote set-url origin git@github.com:diogoccprado/lidar-camera-calibration-ros2.git
-```
-
-## Set About description and topics (CLI)
+## GitHub CLI example
 
 ```bash
 gh repo edit diogoccprado/lidar-camera-calibration-ros2 \
-  --description "ROS 2 workflow for LiDAR-camera extrinsic calibration using Livox Mid-360, RealSense D435, rosbag2, SAM masks, and CalibAnything." \
+  --description "ROS 2 LiDAR-camera calibration guide using synchronized bags, SAM2 masks, CalibAnything, and FAST-LIO2 frame conversion." \
   --add-topic ros2 --add-topic lidar --add-topic camera-calibration \
-  --add-topic extrinsic-calibration --add-topic livox --add-topic realsense \
-  --add-topic calibanything --add-topic segment-anything \
-  --add-topic computer-vision --add-topic robotics
+  --add-topic extrinsic-calibration --add-topic velodyne --add-topic realsense \
+  --add-topic calibanything --add-topic segment-anything --add-topic fast-lio2 \
+  --add-topic sensor-fusion --add-topic computer-vision --add-topic robotics
 ```
-
-> Replace `diogoccprado` with your GitHub username if different.
